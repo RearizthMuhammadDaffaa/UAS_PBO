@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null"  pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="96c55628-7cf2-434d-a203-b00a83e91145">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from buku]]>
+	</queryString>
+	<field name="kode_buku" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_buku" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="penulis" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="stok" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="-24" y="0" width="597" height="79" backcolor="#00FFCC" uuid="51e5872c-b822-40a6-a956-3efa5125533f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Charlemagne Std" size="24"/>
+				</textElement>
+				<text><![CDATA[PERPUSTAKAAN REARIZTH]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="-24" y="0" width="597" height="35" forecolor="#FFFF33" backcolor="#330033" uuid="c95e7f5b-489a-48a2-9ac7-9ca5c2707757"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Charlemagne Std" size="14"/>
+				</textElement>
+				<text><![CDATA[DAFTAR BUKU]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="31" width="100" height="20" uuid="d0264a2d-178d-4ad8-bdf1-8b1a07b82b92"/>
+				<text><![CDATA[KODE BUKU]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="137" y="31" width="100" height="20" uuid="5133ff93-1f6b-440b-96d7-0eb1456989b2"/>
+				<text><![CDATA[JUDUL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="31" width="100" height="20" uuid="d7648c4e-ba45-4585-9507-caa24cf591da"/>
+				<text><![CDATA[PENULIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="433" y="31" width="100" height="20" uuid="e2b8277d-0dc9-4622-ae27-a3098542e0d1"/>
+				<text><![CDATA[STOK]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="50" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="16" width="100" height="20" uuid="5686fb48-a44e-4aef-926e-e54b9f429abd"/>
+				<textFieldExpression><![CDATA[$F{kode_buku}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="137" y="16" width="100" height="20" uuid="7e5ca126-75f8-493a-a65e-f06c43c073b1"/>
+				<textFieldExpression><![CDATA[$F{nama_buku}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="16" width="100" height="20" uuid="35faf29c-557c-4f81-8b35-6b616abee67e"/>
+				<textFieldExpression><![CDATA[$F{penulis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="433" y="16" width="100" height="20" uuid="9cdcf962-22ea-4516-aa30-21c6c9c6930e"/>
+				<textFieldExpression><![CDATA[$F{stok}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="3" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="4" splitType="Stretch"/>
+	</summary>
+</jasperReport>
